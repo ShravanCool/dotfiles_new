@@ -42,8 +42,11 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # Screen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen grightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
+# Increase brightness by 10%
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +10%
+# Decrease brightness by 10%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
+
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
